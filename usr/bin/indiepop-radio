@@ -5,7 +5,7 @@ import sys
 
 try:
     from PyQt5.QtCore import QUrl
-    from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox
+    from PyQt5.QtWidgets import QApplication, QMainWindow
     from PyQt5.QtWebEngineWidgets import QWebEngineView
 except ImportError as exc:
     print(
@@ -31,7 +31,15 @@ class RadioWindow(QMainWindow):
         self.web.loadFinished.connect(self.load_finished)
 
     def load_finished(self, ok):
-        if not ok:
+        if ok:
+            self.web.page().runJavaScript(
+                "(() => {"
+                "const style = document.createElement('style');"
+                "style.textContent = '.descarga-app { display: none !important; }';"
+                "document.head.appendChild(style);"
+                "})();"
+            )
+        else:
             self.statusBar().showMessage(
                 "No se pudo cargar la radio. Comprueba tu conexión e inténtalo de nuevo."
             )

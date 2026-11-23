@@ -16,7 +16,7 @@ requiere Qt Multimedia, GStreamer, VLC ni mpv. WebEngine está en el repositorio
 ## Instalar
 
 ```bash
-sudo apt install ./indiepop-radio_2.0.0_all.deb
+sudo apt install ./indiepop-radio_2.0.1_all.deb
 ```
 
 APT descarga automáticamente las dependencias faltantes; no hay que instalarlas

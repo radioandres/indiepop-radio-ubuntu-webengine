@@ -1,6 +1,5 @@
-indiepop-radio (2.0.0) unstable; urgency=low
+indiepop-radio (2.0.1) unstable; urgency=low
 
-  * Reutilizar el reproductor web en una ventana independiente Qt WebEngine.
-  * Eliminar las dependencias Qt Multimedia y GStreamer.
+  * Ocultar en la aplicación los enlaces de descarga de otras plataformas.
 
- -- Usuario local <local@localhost>  Mon, 23 Nov 2026 12:00:00 -0300
+ -- Indie Pop en Español <radioandres@users.noreply.github.com>  Mon, 23 Nov 2026 12:00:00 -0300

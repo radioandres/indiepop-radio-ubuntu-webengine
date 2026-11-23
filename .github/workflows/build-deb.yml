@@ -25,13 +25,13 @@ jobs:
       - name: Build Debian package
         run: |
           mkdir -p dist
-          ./build-deb.sh "$PWD/dist/indiepop-radio_2.0.0_all.deb"
-          dpkg-deb --info dist/indiepop-radio_2.0.0_all.deb
+          ./build-deb.sh "$PWD/dist/indiepop-radio_2.0.1_all.deb"
+          dpkg-deb --info dist/indiepop-radio_2.0.1_all.deb
 
       - name: Upload package
         uses: actions/upload-artifact@v4
         with:
           name: indiepop-radio-deb
-          path: dist/indiepop-radio_2.0.0_all.deb
+          path: dist/indiepop-radio_2.0.1_all.deb
           if-no-files-found: error
           retention-days: 30

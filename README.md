@@ -3,7 +3,8 @@
 Aplicación de escritorio independiente que abre la web oficial de la radio en
 una ventana propia usando PyQt5 y Qt WebEngine. No lanza Firefox ni Chromium
 como programas externos y reutiliza el reproductor, la información de temas y
-el historial que ya ofrece el sitio.
+el historial que ya ofrece el sitio. Oculta en la app los enlaces para descargar
+aplicaciones de otras plataformas.
 
 ## Requisitos
 
@@ -27,10 +28,10 @@ chmod +x build-deb.sh
 ./build-deb.sh
 ```
 
-El script crea `../indiepop-radio_2.0.0_all.deb`. Para escoger otra ruta:
+El script crea `../indiepop-radio_2.0.1_all.deb`. Para escoger otra ruta:
 
 ```bash
-./build-deb.sh /ruta/al/indiepop-radio_2.0.0_all.deb
+./build-deb.sh /ruta/al/indiepop-radio_2.0.1_all.deb
 ```
 
 También se puede generar desde GitHub: abre la pestaña **Actions**, ejecuta
@@ -41,7 +42,7 @@ su metadata.
 ## Instalar
 
 ```bash
-sudo apt install ./indiepop-radio_2.0.0_all.deb
+sudo apt install ./indiepop-radio_2.0.1_all.deb
 ```
 
 Luego abre **Indie Pop en Español** desde el menú de aplicaciones.
