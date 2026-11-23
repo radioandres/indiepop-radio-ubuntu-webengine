@@ -1,0 +1,37 @@
+name: Build Ubuntu package
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master]
+    paths:
+      - 'usr/**'
+      - 'debian/**'
+      - 'indiepop-radio.desktop'
+      - 'indie-pop-logo.png'
+      - 'build-deb.sh'
+      - '.github/workflows/build-deb.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Build Debian package
+        run: |
+          mkdir -p dist
+          ./build-deb.sh "$PWD/dist/indiepop-radio_2.0.0_all.deb"
+          dpkg-deb --info dist/indiepop-radio_2.0.0_all.deb
+
+      - name: Upload package
+        uses: actions/upload-artifact@v4
+        with:
+          name: indiepop-radio-deb
+          path: dist/indiepop-radio_2.0.0_all.deb
+          if-no-files-found: error
+          retention-days: 30

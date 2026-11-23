@@ -19,8 +19,15 @@ requiere Qt Multimedia, GStreamer, VLC ni mpv. WebEngine está en el repositorio
 sudo apt install ./indiepop-radio_2.0.0_all.deb
 ```
 
-Después abre **Indie Pop en Español** desde el menú de aplicaciones. Requiere
-conexión a Internet y que el sitio de la radio esté disponible.
+APT descarga automáticamente las dependencias faltantes; no hay que instalarlas
+una por una. También se puede abrir el `.deb` en el instalador gráfico de
+Ubuntu/Kubuntu. Para descargar el paquete ya construido, ve a **Actions** en
+GitHub, ejecuta **Build Ubuntu package** y descarga el artefacto
+`indiepop-radio-deb`.
+
+Después abre **Indie Pop en Español** desde el menú de aplicaciones. La
+instalación requiere conexión a Internet para descargar dependencias faltantes;
+la app requiere conexión para acceder al sitio de la radio.
 
 ## Construir
 

@@ -33,6 +33,11 @@ El script crea `../indiepop-radio_2.0.0_all.deb`. Para escoger otra ruta:
 ./build-deb.sh /ruta/al/indiepop-radio_2.0.0_all.deb
 ```
 
+También se puede generar desde GitHub: abre la pestaña **Actions**, ejecuta
+**Build Ubuntu package** con **Run workflow** y descarga el artefacto
+`indiepop-radio-deb`. La acción construye el paquete en Ubuntu 22.04 y valida
+su metadata.
+
 ## Instalar
 
 ```bash
@@ -40,6 +45,12 @@ sudo apt install ./indiepop-radio_2.0.0_all.deb
 ```
 
 Luego abre **Indie Pop en Español** desde el menú de aplicaciones.
+
+El `.deb` declara sus dependencias para que APT las instale automáticamente.
+Así el usuario no necesita buscarlas ni instalarlas una por una, pero sí
+necesita conexión a Internet para descargar las dependencias que aún falten.
+También puede abrir el `.deb` con el instalador gráfico de Ubuntu/Kubuntu y
+aceptar la instalación de dependencias.
 
 ## Configuración
 
