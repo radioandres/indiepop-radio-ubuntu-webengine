@@ -1,0 +1,44 @@
+#!/usr/bin/python3
+"""Indie Pop desktop window backed by the existing radio website."""
+import os
+import sys
+
+try:
+    from PyQt5.QtCore import QUrl
+    from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox
+    from PyQt5.QtWebEngineWidgets import QWebEngineView
+except ImportError as exc:
+    print(
+        "Falta Qt WebEngine. Instala python3-pyqt5.qtwebengine y "
+        "python3-pyqt5.qtwebengine.qtwebengine-data.",
+        file=sys.stderr,
+    )
+    raise SystemExit(1) from exc
+
+
+URL = os.environ.get("INDIEPOP_RADIO_URL", "https://radioandres.mooo.com/")
+
+
+class RadioWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("Indie Pop en Español")
+        self.resize(500, 780)
+        self.setMinimumSize(380, 600)
+        self.web = QWebEngineView(self)
+        self.web.setUrl(QUrl(URL))
+        self.setCentralWidget(self.web)
+        self.web.loadFinished.connect(self.load_finished)
+
+    def load_finished(self, ok):
+        if not ok:
+            self.statusBar().showMessage(
+                "No se pudo cargar la radio. Comprueba tu conexión e inténtalo de nuevo."
+            )
+
+
+app = QApplication(sys.argv)
+app.setApplicationName("Indie Pop en Español")
+window = RadioWindow()
+window.show()
+sys.exit(app.exec_())

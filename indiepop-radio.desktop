@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Indie Pop en Español
+Comment=Escucha Indie Pop en una ventana independiente
+Exec=indiepop-radio
+Icon=indiepop-radio
+Terminal=false
+Categories=Audio;AudioVideo;Player;Network;
+Keywords=radio;indie;pop;español;Uruguay;
+StartupNotify=true
