@@ -9,14 +9,13 @@ try:
     from PyQt5.QtWebEngineWidgets import QWebEngineView
 except ImportError as exc:
     print(
-        "Falta Qt WebEngine. Instala python3-pyqt5.qtwebengine y "
-        "python3-pyqt5.qtwebengine.qtwebengine-data.",
+        "Falta Qt WebEngine. Instálalo con: sudo apt install python3-pyqt5.qtwebengine.",
         file=sys.stderr,
     )
     raise SystemExit(1) from exc
 
 
-URL = os.environ.get("INDIEPOP_RADIO_URL", "https://radioandres.mooo.com/")
+URL = os.environ.get("INDIEPOP_RADIO_URL", "https://indiepopradio.com.uy/")
 
 
 class RadioWindow(QMainWindow):

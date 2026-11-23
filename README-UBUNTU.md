@@ -3,7 +3,8 @@
 Esta edición abre la web oficial dentro de una ventana propia. No lanza Firefox
 ni Chromium como aplicación externa. El reproductor de audio, el tema actual,
 el historial y los controles son los de la web publicada en
-`https://radioandres.mooo.com/`.
+`https://indiepopradio.com.uy/`. El stream se sirve en
+`https://indiepopradio.com.uy/stream`.
 
 ## Dependencias
 
@@ -16,7 +17,7 @@ requiere Qt Multimedia, GStreamer, VLC ni mpv. WebEngine está en el repositorio
 ## Instalar
 
 ```bash
-sudo apt install ./indiepop-radio_2.0.1_all.deb
+sudo apt install ./indiepop-radio_2.0.2_all.deb
 ```
 
 APT descarga automáticamente las dependencias faltantes; no hay que instalarlas

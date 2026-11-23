@@ -1,7 +1,7 @@
 #!/bin/sh
 set -eu
 HERE=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
-VERSION=2.0.1
+VERSION=2.0.2
 OUT=${1:-"$HERE/../indiepop-radio_${VERSION}_all.deb"}
 STAGE=$(mktemp -d)
 trap 'rm -rf "$STAGE"' EXIT HUP INT TERM

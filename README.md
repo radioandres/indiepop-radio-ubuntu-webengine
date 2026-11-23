@@ -13,7 +13,7 @@ aplicaciones de otras plataformas.
   `python3-pyqt5.qtwebengine` (el paquete declara estas dependencias; apt
   resuelve las bibliotecas de WebEngine).
 - El componente `universe` habilitado.
-- Conexión a Internet y disponibilidad de `https://radioandres.mooo.com/`.
+- Conexión a Internet y disponibilidad de `https://indiepopradio.com.uy/`.
 
 La aplicación no usa Qt Multimedia, GStreamer, VLC ni mpv. Qt WebEngine incorpora
 un motor Chromium en la propia ventana, por lo que evita abrir el navegador
@@ -28,10 +28,10 @@ chmod +x build-deb.sh
 ./build-deb.sh
 ```
 
-El script crea `../indiepop-radio_2.0.1_all.deb`. Para escoger otra ruta:
+El script crea `../indiepop-radio_2.0.2_all.deb`. Para escoger otra ruta:
 
 ```bash
-./build-deb.sh /ruta/al/indiepop-radio_2.0.1_all.deb
+./build-deb.sh /ruta/al/indiepop-radio_2.0.2_all.deb
 ```
 
 También se puede generar desde GitHub: abre la pestaña **Actions**, ejecuta
@@ -42,7 +42,7 @@ su metadata.
 ## Instalar
 
 ```bash
-sudo apt install ./indiepop-radio_2.0.1_all.deb
+sudo apt install ./indiepop-radio_2.0.2_all.deb
 ```
 
 Luego abre **Indie Pop en Español** desde el menú de aplicaciones.
@@ -55,11 +55,12 @@ aceptar la instalación de dependencias.
 
 ## Configuración
 
-Por omisión la aplicación abre `https://radioandres.mooo.com/`. Para apuntar a
+Por omisión la aplicación abre `https://indiepopradio.com.uy/`. El reproductor
+de la web obtiene el stream desde `/stream` en ese mismo dominio. Para apuntar a
 otro sitio compatible, define `INDIEPOP_RADIO_URL` al ejecutar:
 
 ```bash
-INDIEPOP_RADIO_URL=https://radioandres.mooo.com/ indiepop-radio
+INDIEPOP_RADIO_URL=https://indiepopradio.com.uy/ indiepop-radio
 ```
 
 ## Archivos
