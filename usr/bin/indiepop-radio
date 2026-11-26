@@ -32,11 +32,17 @@ class RadioWindow(QMainWindow):
     def load_finished(self, ok):
         if ok:
             self.web.page().runJavaScript(
-                "(() => {"
-                "const style = document.createElement('style');"
-                "style.textContent = '.descarga-app, .enlace-internet-radio { display: none !important; }';"
-                "document.head.appendChild(style);"
-                "})();"
+                """(() => {
+                  const ocultarDescargas = () => {
+                    document.querySelectorAll('.descargas, .descarga-app').forEach(
+                      elemento => elemento.style.setProperty('display', 'none', 'important'));
+                    document.querySelectorAll('a[href*="internet-radio.com"]').forEach(
+                      enlace => (enlace.closest('p') || enlace).remove());
+                  };
+                  ocultarDescargas();
+                  new MutationObserver(ocultarDescargas).observe(document.documentElement,
+                    { childList: true, subtree: true });
+                })();"""
             )
         else:
             self.statusBar().showMessage(

@@ -28,10 +28,10 @@ chmod +x build-deb.sh
 ./build-deb.sh
 ```
 
-El script crea `../indiepop-radio_2.0.3_all.deb`. Para escoger otra ruta:
+El script crea `../indiepop-radio_2.0.4_all.deb`. Para escoger otra ruta:
 
 ```bash
-./build-deb.sh /ruta/al/indiepop-radio_2.0.3_all.deb
+./build-deb.sh /ruta/al/indiepop-radio_2.0.4_all.deb
 ```
 
 También se puede generar desde GitHub: abre la pestaña **Actions**, ejecuta
@@ -42,7 +42,7 @@ su metadata.
 ## Instalar
 
 ```bash
-sudo apt install ./indiepop-radio_2.0.3_all.deb
+sudo apt install ./indiepop-radio_2.0.4_all.deb
 ```
 
 Luego abre **Indie Pop en Español** desde el menú de aplicaciones.
