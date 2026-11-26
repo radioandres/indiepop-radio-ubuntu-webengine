@@ -34,7 +34,7 @@ class RadioWindow(QMainWindow):
             self.web.page().runJavaScript(
                 "(() => {"
                 "const style = document.createElement('style');"
-                "style.textContent = '.descarga-app { display: none !important; }';"
+                "style.textContent = '.descarga-app, .enlace-internet-radio { display: none !important; }';"
                 "document.head.appendChild(style);"
                 "})();"
             )

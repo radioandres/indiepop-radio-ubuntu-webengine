@@ -1,6 +1,5 @@
-indiepop-radio (2.0.2) unstable; urgency=low
+indiepop-radio (2.0.3) unstable; urgency=low
 
-  * Usar el dominio nuevo indiepopradio.com.uy para abrir la radio.
-  * Corregir el mensaje de instalación de Qt WebEngine.
+  * Ocultar también en la app el enlace a Internet Radio.
 
  -- Indie Pop en Español <radioandres@users.noreply.github.com>  Mon, 23 Nov 2026 12:00:00 -0300
